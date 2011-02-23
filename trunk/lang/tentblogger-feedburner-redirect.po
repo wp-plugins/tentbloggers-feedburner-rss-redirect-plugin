@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TentBlogger FeedBurner RSS Redirect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-22 12:43-0500\n"
-"PO-Revision-Date: 2011-02-22 12:43-0500\n"
+"POT-Creation-Date: 2011-02-23 10:20-0500\n"
+"PO-Revision-Date: 2011-02-23 10:20-0500\n"
 "Last-Translator: \n"
 "Language-Team: TentBlogger <info@tentblogger.com>\n"
 "MIME-Version: 1.0\n"
@@ -41,11 +41,11 @@ msgid "Configuration Options"
 msgstr ""
 
 #: ../tentblogger-feedburner-redirect-dashboard.php:35
-msgid "Point My RSS Feed To:"
+msgid "Your FeedBurner Address:"
 msgstr ""
 
 #: ../tentblogger-feedburner-redirect-dashboard.php:41
-msgid "Point My Comment Feed To:"
+msgid "Your FeedBurner Address For Comment Feeds:"
 msgstr ""
 
 #: ../tentblogger-feedburner-redirect-dashboard.php:47

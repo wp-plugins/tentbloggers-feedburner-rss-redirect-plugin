@@ -32,13 +32,13 @@
 			<form method="post" action="" id="tentblogger-feedburner-configuraton">
 				<p>
 					<label for="tentblogger-feedburner-feed-url">
-						<?php _e('Point My RSS Feed To:', 'tentblogger-feedburner'); ?>
+						<?php _e('Your FeedBurner Address:', 'tentblogger-feedburner'); ?>
 					</label>
 					<input type="text" id="tentblogger-feedburner-feed-url" name="tentblogger-feedburner-feed-url" value="<?php echo $options['tentblogger-feedburner-feed-url']; ?>" />
 				</p>
 				<p>
 					<label for="tentblogger-feedburner-comment-url">
-						<?php _e('Point My Comment Feed To:', 'tentblogger-feedburner'); ?>
+						<?php _e('Your FeedBurner Address For Comment Feeds:', 'tentblogger-feedburner'); ?>
 					</label>
 					<input type="text" id="tentblogger-feedburner-comment-url" name="tentblogger-feedburner-comment-url" value="<?php echo $options['tentblogger-comment-feed-url']; ?>" />
 				</p>
