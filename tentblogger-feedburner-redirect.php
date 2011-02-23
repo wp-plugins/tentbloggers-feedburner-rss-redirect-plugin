@@ -55,7 +55,7 @@ class TentBlogger_FeedBurner {
 	 */
 	public function admin() {
 		if(function_exists('add_menu_page')) {
-			$this->load_file('tentblogger-feedburner-styles', '/tentblogger-feedburner-redirect-plugin/css/tentblogger-feedburner-admin.css');
+			$this->load_file('tentblogger-feedburner-styles', '/tentbloggers-feedburner-rss-redirect-plugin/css/tentblogger-feedburner-admin.css');
 			add_menu_page('FeedBurner', 'FeedBurner', 'administrator', 'tentblogger-feedburner-handle', array($this, 'display'));
 		} // end if
 	} // end admin
