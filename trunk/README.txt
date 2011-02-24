@@ -3,7 +3,7 @@ Contributors: tentblogger
 Tags: seo, redirection, rss, feedburner, subscription
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 This simple (yet effective) plugin redirects the your blog's feed to FeedBurner!
 
@@ -28,6 +28,9 @@ WordPress' native RSS is great but it's made even better with FeedBurner!
 1. TentBlogger RSS FeedBurner Redirect
 
 == Changelog ==
+
+= 1.1 =
+* Fixed a problem that was directing the 'more' link to one of the feed URLs.
 
 = 1.0 =
 * Initial release
