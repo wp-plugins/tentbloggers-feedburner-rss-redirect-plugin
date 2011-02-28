@@ -1,4 +1,4 @@
-<![CDATA[ TentBlogger FeedBurner 1.2 ]]>
+<![CDATA[ TentBlogger FeedBurner 1.3 ]]>
 <?php $options = get_option('tentblogger-feedburner'); ?>
 <div class="wrap">
 	<h2>

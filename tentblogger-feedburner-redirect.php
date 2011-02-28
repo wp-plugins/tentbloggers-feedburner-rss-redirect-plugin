@@ -171,6 +171,8 @@ class TentBlogger_FeedBurner {
 				} // end switch/case
 			} // end if/else
 	
+		} // end if
+		
 	} // end redirect
 	
 	/*--------------------------------------------*
