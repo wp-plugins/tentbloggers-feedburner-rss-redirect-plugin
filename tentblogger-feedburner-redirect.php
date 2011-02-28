@@ -3,7 +3,7 @@
 Plugin Name: TentBlogger FeedBurner RSS Redirect
 Plugin URI: http://tentblogger.com/feedburner-plugin/
 Description: This simple (yet effective) plugin redirects the your blog's feed to FeedBurner!
-Version: 1.1
+Version: 1.2
 Author: TentBlogger
 Author URI: http://tentblogger.com
 License:
@@ -143,35 +143,33 @@ class TentBlogger_FeedBurner {
 	
 		global $feed, $withcomments;
 		
-		if(is_feed() || !preg_match('/feedburner/i', $_SERVER['HTTP_USER_AGENT'])) {
+		if(!is_feed() || preg_match('/feedburner/i', $_SERVER['HTTP_USER_AGENT'])) {
+			return;
+		}
 			
-			$rss_feed_url = $this->get_rss_feed_url();
-			$comment_feed_url = $this->get_comment_feed_url();
+		$rss_feed_url = $this->get_rss_feed_url();
+		$comment_feed_url = $this->get_comment_feed_url();
 			
-			/* If the feed's are specified, redirect... */
-			if($rss_feed_url != null || $comment_feed_url != null) {
-			
-				/* Redirects the comments feed */
-				if($feed == 'comments-rss2' || $withcomments) {
-					$this->redirect_feed_to($comment_feed_url);
-				} else {
-					/* Handle other feeds */
-					switch($feed) {
-						case 'feed':
-						case 'rdf':
-						case 'rss':
-						case 'rss2':
-						case 'atom':
-							$this->redirect_feed_to($rss_feed_url);
-							break;
-						default:
-							break;
-					} // end switch/case
-				} // end if/else
-				
-			} // end if
-			
-		} // end if
+		/* If the feed's are specified, redirect... */
+		if($rss_feed_url != null || $comment_feed_url != null) {
+		
+			/* Redirects the comments feed */
+			if($feed == 'comments-rss2' || $withcomments) {
+				$this->redirect_feed_to($comment_feed_url);
+			} else {
+				/* Handle other feeds */
+				switch($feed) {
+					case 'feed':
+					case 'rdf':
+					case 'rss':
+					case 'rss2':
+					case 'atom':
+						$this->redirect_feed_to($rss_feed_url);
+						break;
+					default:
+						break;
+				} // end switch/case
+			} // end if/else
 	
 	} // end redirect
 	
