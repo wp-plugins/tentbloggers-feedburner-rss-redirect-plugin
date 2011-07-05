@@ -1,16 +1,19 @@
-<![CDATA[ TentBlogger FeedBurner 1.3 ]]>
+<![CDATA[ TentBlogger FeedBurner 2.0 ]]>
 <?php $options = get_option('tentblogger-feedburner'); ?>
 <div class="wrap">
-	<h2>
-		<?php _e("TentBlogger's FeedBurner RSS Redirect Plugin", "tentblogger-feedburner"); ?>
-	</h2>
-	<div class="tentblogger-postbox postbox">
-		<h3 class="tentblogger-hndle hndle">
+  <div class="icon">
+    <h2>
+      <?php _e("TentBlogger's FeedBurner RSS Redirect Plugin", "tentblogger-feedburner"); ?>
+    </h2>
+  </div>
+  <div class="postbox-container">
+	<div id="poststuff" class="postbox">
+		<h3 class="hndle">
 			<span>
 				<?php _e("FeedBurner RSS Redirection", "tentblogger-feedburner"); ?>
 			</span>
 		</h3>
-		<div class="tentblogger-inside inside">
+		<div class="inside">
 			<?php if($is_updated) { ?>
 				<div id="message" class="updated fade">
 					<p>
@@ -25,7 +28,7 @@
 				<?php _e('WordPress\' native RSS is great but it\'s made even better with <a href="http://tentblogger.com/feedburner-plugin/">FeedBurner</a>!', 'tentblogger-feedburner'); ?>
 			</p>
 		</div>
-		<fieldset>
+		<fieldset style="padding: 10px; margin: 10px; border: 1px solid #ddd;">
 			<legend>
 				<?php _e('Configuration Options', 'tentblogger-feedburner'); ?>
 			</legend>
@@ -44,7 +47,7 @@
 				</p>
 				<p class="submit" id="tentblogger-feedburner-submit">
 					<?php wp_nonce_field('tentblogger-feedburner', 'tentblogger-feedburner-admin'); ?>
-					<input type="submit" name="submit" value="<?php _e('Redirect My Feeds!', 'tentblogger-feedburner'); ?>" />
+					<input type="submit" name="submit" class="button-primary"  value="<?php _e('Redirect My Feeds!', 'tentblogger-feedburner'); ?>" />
 				</p>
 			</form>
 		</fieldset>
