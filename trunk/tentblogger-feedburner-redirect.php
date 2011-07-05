@@ -3,7 +3,7 @@
 Plugin Name: TentBlogger FeedBurner RSS Redirect
 Plugin URI: http://tentblogger.com/feedburner-plugin/
 Description: This simple (yet effective) plugin redirects the your blog's feed to FeedBurner!
-Version: 1.3
+Version: 2.0
 Author: TentBlogger
 Author URI: http://tentblogger.com
 License:
@@ -56,7 +56,10 @@ class TentBlogger_FeedBurner {
 	public function admin() {
 		if(function_exists('add_menu_page')) {
 			$this->load_file('tentblogger-feedburner-styles', '/tentbloggers-feedburner-rss-redirect-plugin/css/tentblogger-feedburner-admin.css');
-			add_menu_page('FeedBurner', 'FeedBurner', 'administrator', 'tentblogger-feedburner-handle', array($this, 'display'));
+      if(!$this->my_menu_exists('tentblogger-handle')) {
+        add_menu_page('TentBlogger', 'TentBlogger', 'administrator', 'tentblogger-handle', array($this, 'display'));
+      }
+      add_submenu_page('tentblogger-handle', 'TentBlogger', 'FeedBurner', 'administrator', 'tentblogger-feedburner-handle', array($this, 'display'));
 		} // end if
 	} // end admin
 	
@@ -247,7 +250,31 @@ class TentBlogger_FeedBurner {
 			} // end if
 		} // end if
 	} // end _load_file
-	
+		
+  /**
+   * http://wordpress.stackexchange.com/questions/6311/how-to-check-if-an-admin-submenu-already-exists
+   */
+  private function my_menu_exists( $handle, $sub = false){
+    if( !is_admin() || (defined('DOING_AJAX') && DOING_AJAX) )
+      return false;
+    global $menu, $submenu;
+    $check_menu = $sub ? $submenu : $menu;
+    if( empty( $check_menu ) )
+      return false;
+    foreach( $check_menu as $k => $item ){
+      if( $sub ){
+        foreach( $item as $sm ){
+          if($handle == $sm[2])
+            return true;
+        }
+      } else {
+        if( $handle == $item[2] )
+          return true;
+      }
+    }
+    return false;
+  } // end my_menu_exists
+  
 } // TentBlogger_FeedBurner
 new TentBlogger_FeedBurner();
 ?>
