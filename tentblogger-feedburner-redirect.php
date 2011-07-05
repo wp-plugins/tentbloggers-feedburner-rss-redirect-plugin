@@ -3,7 +3,7 @@
 Plugin Name: TentBlogger FeedBurner RSS Redirect
 Plugin URI: http://tentblogger.com/feedburner-plugin/
 Description: This simple (yet effective) plugin redirects the your blog's feed to FeedBurner!
-Version: 2.0
+Version: 2.1
 Author: TentBlogger
 Author URI: http://tentblogger.com
 License:
