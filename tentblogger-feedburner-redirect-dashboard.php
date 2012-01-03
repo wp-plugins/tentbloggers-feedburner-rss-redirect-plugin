@@ -5,6 +5,7 @@
     <h2>
       <?php _e("TentBlogger's FeedBurner RSS Redirect Plugin", "tentblogger-feedburner"); ?>
     </h2>
+    <p class="description"><?php _e('Easily redirect your WordPress’ RSS Feed to FeedBurner automatically!', 'tentblogger-feedburner'); ?></p>
   </div>
   <div class="postbox-container">
 	<div id="poststuff" class="postbox">
@@ -22,7 +23,7 @@
 				</div>
 			<?php } // end if ?>
 			<p>
-			<?php _e("This simple (yet effective) plugin redirects the your blog's feed to Feedburner (link to my feedburner post here) ! This is strategic because feedburner (link to my feedburner post here) lets you track your readers, analyze trends in your readership, and also allows you to setup email subscriptions and even monetize your feed!", 'tentblogger-feedburner'); ?>
+			<?php _e("This simple (yet effective) plugin redirects the your blog's feed to <a href='http://tentblogger.com/feedburner-plugin/'>FeedBurner</a>! This is strategic because <a href='http://tentblogger.com/feedburner-plugin/'>FeedBurner</a> lets you track your readers, analyze trends in your readership, and also allows you to setup email subscriptions and even monetize your feed!", 'tentblogger-feedburner'); ?>
 			</p>
 			<p>
 				<?php _e('WordPress\' native RSS is great but it\'s made even better with <a href="http://tentblogger.com/feedburner-plugin/">FeedBurner</a>!', 'tentblogger-feedburner'); ?>
